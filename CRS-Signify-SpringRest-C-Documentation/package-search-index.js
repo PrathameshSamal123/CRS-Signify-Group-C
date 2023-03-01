@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.signify.application"},{"l":"com.signify.bean"},{"l":"com.signify.constants"},{"l":"com.signify.dao"},{"l":"com.signify.exception"},{"l":"com.signify.restcontroller"},{"l":"com.signify.service"},{"l":"com.signify.utils"}];updateSearchResults();
