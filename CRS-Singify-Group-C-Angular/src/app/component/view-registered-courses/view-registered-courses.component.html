@@ -1,0 +1,61 @@
+<style>
+    .table-wrapper {
+      margin: 0 auto;
+      max-width: 800px;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+    
+    .table-wrapper table {
+      width: 100%;
+      margin-bottom: 0;
+      background-color: #fff;
+      border-collapse: collapse;
+    }
+    
+    .table-wrapper thead th {
+      font-weight: bold;
+      background-color: #343a40;
+      color: #fff;
+      border-color: #454d55;
+    }
+    
+    .table-wrapper tbody tr:nth-of-type(even) {
+      background-color: #f2f2f2;
+    }
+    
+    .table-wrapper tbody td {
+      padding: 8px;
+      vertical-align: middle;
+      border-top: 1px solid #dee2e6;
+    }
+    
+    .table-wrapper tbody td:first-child {
+      font-weight: bold;
+    }
+  </style>
+  <br>
+  <div class="table-wrapper">
+    <h4 style="text-align: center;">Your Registered Courses</h4>
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Course Code</th>
+          <th scope="col">Course Name</th>
+          <th scope="col">Date of Registration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let user of getData; let i=index'>
+          <td>{{ i+1 }}</td>
+          <td>{{user.courseCode}}</td>
+          <td>{{user.courseName}}</td>
+          <td>{{user.dateOfRegistration}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

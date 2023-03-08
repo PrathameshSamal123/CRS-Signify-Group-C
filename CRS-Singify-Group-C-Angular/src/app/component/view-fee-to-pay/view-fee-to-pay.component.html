@@ -1,0 +1,66 @@
+<style>
+  .table-wrapper {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  }
+  
+  .table-wrapper table {
+    width: 100%;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-collapse: collapse;
+  }
+  
+  .table-wrapper thead th {
+    font-weight: bold;
+    background-color: #343a40;
+    color: #fff;
+    border-color: #454d55;
+  }
+  
+  .table-wrapper tbody tr:nth-of-type(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .table-wrapper tbody td {
+    padding: 8px;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .table-wrapper tbody td:first-child {
+    font-weight: bold;
+  }
+  
+  .total-fees {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+</style>
+<br>
+<div class="table-wrapper">
+  <h4 style="text-align: center;">Fee Details</h4>
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Course Code</th>
+        <th scope="col">Course Name</th>
+        <th scope="col">Course Fees</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let user of getData; let i=index'>
+        <td>{{ i+1 }}</td>
+        <td>{{user.courseCode}}</td>
+        <td>{{user.courseName}}</td>
+        <td>{{user.courseFee}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

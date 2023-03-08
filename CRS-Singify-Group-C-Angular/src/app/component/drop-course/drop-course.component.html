@@ -1,0 +1,14 @@
+<br>
+<br>
+
+<div class="form-container">
+    <h3>Drop Course</h3>
+    <br>
+    <form>
+      <div class="form-field">
+        <label for="courseCode">Enter Course code to Drop</label>
+        <input type="text" id="courseCode" [(ngModel)]="courseCode" name="courseCode" required>
+      </div>
+      <button type="submit" (click)="dropCourse()">Drop course</button>
+    </form>
+  </div>
